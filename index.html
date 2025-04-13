@@ -1,0 +1,379 @@
+
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jf-sport</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: white;
+      color: black;
+    }header.main-header {
+  background-color: black;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 60px;
+  z-index: 1000;
+}
+.fa-bars:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+.sidebar a {
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #444;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+.logo h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 15px;
+}
+
+.header-icons i {
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+.search-box {
+  display: none;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.search-box input {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.featured-section {
+  padding: 50px 30px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: scale(1.03);
+}
+
+.product-card img {
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: #f39c12;
+  margin: 5px 0;
+}
+
+.price {
+  font-size: 16px;
+}
+
+.price del {
+  color: #888;
+  margin-left: 5px;
+}
+
+.product-card button {
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #444;
+}
+
+.section {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  width: 280px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.categories {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.categories img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.cat-box {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  color: black;
+}
+
+.cat-box:hover {
+  background-color: #e0e0e0;
+}
+
+.cat-box img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+nav a i, .header-icons i {
+  font-size: 20px;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+
+nav a i:hover {
+  color: #25D366; /* واتساب */
+}
+
+nav a .fa-instagram:hover {
+  color: #E1306C; /* انستغرام */
+}
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+  </style>
+</head>
+<body>
+  <div id="sidebar" class="sidebar">
+    <a href="#">الرئيسية</a>
+    <a href="#categories">المنتجات</a>
+    <a href="#">العروض</a>
+    <a href="#">تواصل معنا</a>
+    <a href="cart.html">السلة</a>
+  </div>
+  <header class="main-header">
+    <div class="logo">
+      <h1>Jf-sport</h1>
+    </div>
+    <nav>
+      <a href="#">الرئيسية</a>
+      <a href="#">عن المتجر</a>
+      <a href="#categories">المنتجات</a>
+      <a href="#">تواصل معنا</a>
+      <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+    </nav>
+    <div class="header-icons">
+      <i class="fas fa-search" onclick="toggleSearch()"></i>
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="search-box" id="searchBox">
+      <input type="text" placeholder="ابحث عن منتج...">
+    </div>
+  </header>  <section class="hero">
+    <img src="photo_2025-04-12_19-42-07.jpg" alt="شعار المتجر">
+    <h2>مرحباً بك في Jf-sport</h2>
+<a href="#categories" class="btn">ابدأ التسوق</a>
+  </section>  <section class="featured-section">
+    <h2 class="section-title">منتجات مميزة</h2>
+    <div class="products">
+      <div class="product-card">
+        <a href="tools.html">
+          <img src="photo_2025-04-11_17-11-04.jpg" alt="دمبل حديد">
+          <h3>دمبل حديد 10 كغ</h3>
+        </a>
+        <div class="stars">★★★★★</div>
+        <div class="price"><del>$20.00</del> $15.99</div>
+        <button onclick="addToCart('دمبل حديد 10 كغ', '$15.99', 'products/dumbbell1.png')">أضف إلى السلة</button>
+      </div><div class="product-card">
+    <a href="clothes.html">
+      <img src="photo_2025-04-11_17-11-08.jpg" alt="تيشيرت رياضي">
+      <h3>تيشيرت رياضي</h3>
+    </a>
+    <div class="stars">★★★★☆</div>
+    <div class="price"><del>$25.00</del> $19.99</div>
+    <button onclick="addToCart('تيشيرت رياضي', '$19.99', 'products/shirt.png')">أضف إلى السلة</button>
+  </div>
+
+  <div class="product-card">
+    <a href="package.html">
+      <img src="photo_2025-04-11_17-12-41.jpg" alt="باكدج تدريب منزلي">
+      <h3>باكدج تدريب منزلي</h3>
+    </a>
+    <div class="stars">★★★★★</div>
+    <div class="price"><del>$85.00</del> $69.00</div>
+    <button onclick="addToCart('باكدج تدريب منزلي', '$69.00', 'products/bundle2.png')">أضف إلى السلة</button>
+  </div>
+</div>
+
+  </section>  <section class="section">
+    <div class="box">
+      <h3>عن المتجر</h3>
+      <p>نحن متخصصون في بيع المعدات الرياضية والملابس والإكسسوارات بجودة عالية.</p>
+      
+    </div>
+    <div class="box">
+      <h3>منتجاتنا</h3>
+      <p>تصفح تشكيلتنا المتنوعة من المنتجات الرياضية.</p>
+      <a href="#categories" class="btn">عرض الكل</a>
+    </div>
+    <div class="box">
+      <h3>تواصل معنا</h3>
+      <a href="https://wa.me/+20 115 602 1267" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.instagram.com/jimmyfit__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <p>راسلنا عبر واتساب أو إنستغرام لأي استفسار.</p>
+    </div>
+  </section>  <section id="categories" class="categories">
+    <h2>الأقسام</h2>
+    <div class="grid">
+      <div class="cat-box">
+        <a href="tools.html">
+          <img src="photo_2025-04-04_00-19-48.jpg" alt="أدوات تدريب">
+          <p>أدوات تدريب</p>
+        </a>
+      </div>
+      <div class="cat-box">
+        <a href="accessories.html">
+          <img src="photo_2025-04-04_00-19-53.jpg" alt="إكسسوارات">
+          <p>إكسسوارات جيم</p>
+        </a>
+      </div>
+      <div class="cat-box">
+        <a href="clothes.html">
+          <img src="photo_2025-04-04_00-19-57.jpg" alt="ملابس">
+          <p>ملابس رياضية</p>
+        </a>
+      </div>
+      <div class="cat-box">
+        <a href="package.html">
+          <img src="photo_2025-04-04_00-19-42.jpg" alt="باكدج">
+          <p>باكدج أدوات تدريب</p>
+        </a>
+      </div>
+    </div>
+  </section>  <footer>
+    &copy; 2025 Jf-sport. جميع الحقوق محفوظة.
+  </footer>  <script>
+    function toggleSearch() {
+      const box = document.getElementById("searchBox");
+      box.style.display = box.style.display === "block" ? "none" : "block";
+    }
+
+    function addToCart(name, price, image) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({ name, price, image });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert("تمت إضافة المنتج إلى السلة!");
+    }
+    document.querySelector(".fa-bars").addEventListener("click", function () {
+    document.getElementById("sidebar").classList.toggle("open");
+  });
+  </script></body>
+</html>
